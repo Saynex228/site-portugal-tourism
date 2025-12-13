@@ -704,3 +704,325 @@ Page Oeuvres
         font-style: normal;
     }
 }
+
+#lieux {
+
+    body {
+    font-family: var(--font-main);
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    line-height: 1.6;
+    }
+
+/* --- Navbar --- */
+
+
+/* --- Hero Section --- */
+.top {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(../images/Lieux/AlbufeiraAcueil.webp); /* Remplace par ton image */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.top-content h1 {
+    font-family: var(--font-title);
+    font-size: 5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
+
+.top-content p {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.arrow-down {
+    margin-top: 20px;
+    font-size: 2rem;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+    40% {transform: translateY(-10px);}
+    60% {transform: translateY(-5px);}
+}
+
+/* --- Layout Général --- */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.section {
+    margin-bottom: 60px;
+}
+
+.section-title {
+    color: var(--primary-green);
+    font-family: var(--font-title);
+    font-size: 2rem;
+    margin-bottom: 30px;
+    padding-left: 15px;
+    border-left: 6px solid var(--primary-green); /* La barre verte à gauche */
+    text-transform: uppercase;
+}
+
+/* --- Section Presentation & Dates --- */
+.content-row {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.timeline-card {
+    background-color: var(--card-bg);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    flex: 1;
+}
+
+.timeline-card ul {
+    list-style: none;
+    padding-left: 10px;
+    border-left: 3px solid var(--primary-green);
+}
+
+.timeline-card li {
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+    position: relative;
+    padding-left: 15px;
+}
+
+.timeline-card li::before {
+    content: "•";
+    color: var(--primary-green);
+    font-size: 1.5rem;
+    position: absolute;
+    left: -20px;
+    top: -5px;
+}
+
+.map-block, .image-block {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.image-block img, .map-block img {
+    max-width: 1000%;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* --- Section Géographie --- */
+.geo-card {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+}
+
+.geo-text, .geo-desc {
+    flex: 1;
+    min-width: 300px;
+}
+
+.geo-img-small, .geo-img-main {
+    border-radius: 8px;
+    margin-top: 15px;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* --- Section Le Saviez-vous (Grid) --- */
+
+
+.grid-4 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    
+    /* C'est la ligne magique qui empêche les autres de grandir ! */
+    align-items: start; 
+}
+
+/* --- Section Interactive (Version HTML <details>) --- */
+
+/* La boîte globale */
+details.info-box {
+    background-color: var(--light-green);
+    border: 1px solid #c2e8c2;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+/* Le titre (summary) */
+summary.box-header {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    cursor: pointer;
+    list-style: none; /* Enlève le petit triangle moche par défaut */
+    outline: none;    /* Enlève le contour bleu au clic */
+}
+
+/* Petite astuce pour Chrome/Safari pour bien cacher le triangle par défaut */
+summary.box-header::-webkit-details-marker {
+    display: none;
+}
+
+/* La flèche */
+.arrow {
+    font-size: 0.8rem;
+    transition: transform 0.3s ease;
+}
+
+/* Le contenu caché */
+.box-content {
+    padding: 0 20px 20px 20px;
+    text-align: left;
+    font-size: 0.95rem;
+    color: #333;
+    /* Petite animation d'apparition douce */
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* --- Ce qui se passe quand c'est ouvert ([open]) --- */
+
+/* Change la couleur de fond quand ouvert */
+details[open].info-box {
+    background-color: #c8fbc5;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Tourne la flèche quand ouvert */
+details[open] .arrow {
+    transform: rotate(180deg);
+}
+
+/* Définition de l'animation d'apparition */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.info-box:hover {
+    transform: translateY(-3px);
+}
+
+/* --- Section Activités --- */
+.activity-card {
+    background: white;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: box-shadow 0.3s;
+}
+
+.activity-card:hover {
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+.activity-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 15px;
+}
+
+.card-body h3 {
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.card-body p {
+    font-size: 0.8rem;
+    color: #666;
+}
+
+/* --- Section Découvrez aussi --- */
+.discover-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.discover-card {
+    background-color: var(--pink-card);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.05);
+    gap: 20px;
+}
+
+.discover-card img {
+    width: 180px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.discover-text h3 {
+    font-family: var(--font-title);
+    margin-bottom: 5px;
+    font-size: 1.3rem;
+    color: #333;
+}
+
+.discover-text p {
+    font-size: 0.9rem;
+}
+
+/* --- Footer --- */
+.footer {
+    background-color: var(--footer-red);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+
+}
