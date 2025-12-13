@@ -456,3 +456,251 @@ footer {
     .img-5 { background-image: url(''); }
     .img-6 { background-image: url(''); }
 }
+
+
+/*
+Page Oeuvres
+*/
+/* --- STYLES SPÉCIFIQUES À LA PAGE OEUVRES (#OeuvresPage) --- */
+
+#OeuvresPage {
+    
+    /* Le HERO est décalé pour le premier affichage de la page */
+    .hero#hero-oeuvres {
+        margin-top: var(--header-height); 
+        
+        height: 100vh;
+        background: linear-gradient(rgba(0, 92, 40, 0.7), rgba(0, 61, 26, 0.8)),
+                    url('../images/Oeuvres/Le saut du Lapin.png'); 
+        
+        background-size: cover; 
+        background-repeat: no-repeat; 
+        background-position: center 35%; 
+        background-attachment: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero-content {
+        text-align: center;
+        color: white;
+        margin-top: 0; 
+    }
+    
+    .hero h1 {
+        font-size: 4rem; 
+        font-weight: 700;
+        margin-bottom: 15px;
+        letter-spacing: -2px;
+    }
+
+    .hero p {
+        font-size: 2rem;
+        font-weight: 300;
+        opacity: 0.9;
+        color: var(--light-green);
+        font-style: italic;
+    }
+
+    /* STRUCTURE DU CONTENU */
+    .page-wrapper {
+        width: 100%;
+        padding: 80px 20px 80px 20px;
+        display: grid;
+        grid-template-columns: 280px 1fr;
+        gap: 60px;
+        position: relative;
+    }
+
+    /* Sidebar */
+    .sidebar {
+        position: sticky;
+        top: calc(var(--header-height) + 20px); 
+        height: fit-content;
+        justify-self: start;
+        width: 100%;
+    }
+
+    .sidebar-card {
+        background: white;
+        padding: 30px 20px;
+        border-radius: 0 12px 12px 0;
+        box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.1);
+        border-left: 5px solid var(--primary-green);
+    }
+    
+    .sidebar-nav h3 {
+        font-size: 1.2rem;
+        color: #333;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .sidebar-nav a {
+        display: block;
+        padding: 12px 10px;
+        color: var(--primary-green);
+        font-weight: 600;
+        font-size: 1rem;
+        margin-bottom: 5px;
+        border-radius: 4px;
+        transition: all 0.2s;
+    }
+
+    .sidebar-nav a:hover {
+        background-color: var(--light-green);
+        padding-left: 20px;
+        color: #003d1a;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    /* Article de contenu */
+    article {
+        background: white;
+        padding: 60px;
+        border-radius: 8px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        border-left: 8px solid var(--primary-green);
+        
+        /* CORRECTION ANCRE: La propriété clé pour le décalage lors du clic sur le lien */
+        scroll-margin-top: var(--header-height); 
+    }
+
+    article h2 {
+        color: var(--primary-green);
+        font-size: 2.5rem;
+        margin-bottom: 30px;
+        padding-bottom: 15px;
+        border-bottom: 2px solid #eee;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+
+    article p {
+        margin-bottom: 20px;
+        text-align: justify;
+        font-size: 1.2rem;
+        color: #444;
+        line-height: 1.9;
+    }
+
+    /* --- Styles des colonnes (Image/Texte) --- */
+
+    .article-content-split {
+        display: flex;
+        align-items: flex-start; 
+        gap: 40px;
+        margin-bottom: 20px;
+    }
+
+    .article-content-split .text-content {
+        flex: 1;
+    }
+    
+    .article-image-right, 
+    .article-image-left {
+        width: 300px; 
+        flex-shrink: 0;
+        text-align: center;
+        padding-top: 20px;
+    }
+
+    .article-image-right { order: 2; } 
+    .article-image-left { order: 1; } 
+    
+    .article-content-split img {
+        width: 100%;
+        height: auto;
+        border-radius: 4px;
+        margin-bottom: 15px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    
+    /* Styles pour les images superposées */
+    .article-image-right img:last-child {
+        margin-bottom: 0; 
+    }
+
+    .article-image-right.large-images img {
+        width: 80%;
+        margin-left: 10%;
+    }
+
+    figcaption {
+        font-style: italic;
+        font-size: 0.9rem;
+        color: #777;
+        margin-top: -10px;
+    }
+
+    /* Style de la citation (blockquote et p.citation) */
+    .artist-quote {
+        border-left: 5px solid var(--primary-red);
+        padding-left: 20px;
+        margin: 25px 0;
+        font-style: italic;
+        font-size: 1.4rem;
+        color: #555;
+    }
+
+    .citation {
+        font-size: 1rem !important;
+        text-align: right !important;
+        margin-top: -10px;
+        font-style: normal;
+        color: #777;
+    }
+
+    /* Texte sur toute la largeur après un split */
+    .full-width-text {
+        clear: both;
+        padding-top: 20px;
+        margin-top: 20px;
+        border-top: 1px dashed #eee;
+    }
+
+    /* Dernier article du bas (Autres Oeuvres) */
+    article.footer-article {
+        border-left-color: var(--primary-red);
+    }
+
+    article.footer-article h2 {
+        color: var(--primary-red);
+    }
+
+    /* Grille des autres oeuvres */
+    .related-works-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    .related-works-grid figure img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 4px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        transition: transform 0.2s;
+    }
+
+    .related-works-grid figcaption {
+        display: block;
+        margin-top: 10px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #333;
+        font-style: normal;
+    }
+}
