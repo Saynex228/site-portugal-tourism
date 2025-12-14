@@ -79,11 +79,7 @@ header {
     border-radius: 50%;
     background-color: white;
     border: 3px solid var(--light-green);
-<<<<<<< HEAD
     background-image: url('../images/portugal_explora.png');
-=======
-    background-image: url(../images/portugal_explora.png);
->>>>>>> 2d6039e (accueil final)
     background-size: cover;
     background-position: center;
 }
