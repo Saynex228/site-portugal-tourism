@@ -570,8 +570,6 @@ Page Oeuvres
         border-radius: 8px;
         box-shadow: 0 4px 15px rgba(0,0,0,0.05);
         border-left: 8px solid var(--primary-green);
-        
-        /* CORRECTION ANCRE: La propriété clé pour le décalage lors du clic sur le lien */
         scroll-margin-top: var(--header-height); 
     }
 
@@ -705,8 +703,11 @@ Page Oeuvres
     }
 }
 
+
+/* --- Page Lieux --- */
 #lieux {
 
+    /* --- Section après Header --- */
     .top {
         height: 100vh;
         background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(../images/Lieux/AlbufeiraAcueil.webp); /* Remplace par ton image */
@@ -913,7 +914,7 @@ Page Oeuvres
 
     /* --- Section Activités --- */
 
-    .activity-card {
+    .activites-card {
         background: white;
         border: 1px solid #eee;
         border-radius: 10px;
@@ -923,11 +924,11 @@ Page Oeuvres
         height: 100%;
     }
 
-    .activity-card:hover {
+    .activites-card:hover {
         box-shadow: 0 8px 15px rgba(0,0,0,0.1);
     }
 
-    .activity-card img {
+    .activites-card img {
         width: 100%;
         height: 150px;
         object-fit: cover;
@@ -950,13 +951,13 @@ Page Oeuvres
 
     /* --- Section Découvrez aussi --- */
 
-    .discover-list {
+    .decouvrez-list {
         display: flex;
         flex-direction: column;
         gap: 20px;
     }
 
-    .discover-card {
+    .decouvrez-card {
         background-color: #FFE4E4;
         border-radius: 15px;
         display: flex;
@@ -967,25 +968,25 @@ Page Oeuvres
         transition: box-shadow 0.3s;
     }
 
-    .discover-card:hover {
+    .decouvrez-card:hover {
         box-shadow: 0 8px 15px rgba(0,0,0,0.1);
     }
 
-    .discover-card img {
+    .decouvrez-card img {
         width: 180px;
         height: 110px;
         object-fit: cover;
         border-radius: 10px;
     }
 
-    .discover-text h3 {
+    .decouvrez-text h3 {
         font-family: var(--font-title);
         margin-bottom: 5px;
         font-size: 1.6rem;
         color: #333;
     }
 
-    .discover-text p {
+    .decouvrez-text p {
         font-size: 1em;
     }
 }
