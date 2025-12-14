@@ -18,7 +18,7 @@
 }
 
 body {
-    font-family: var(--font-text); /* Весь маленький текст - Poppins */
+    font-family: var(--font-text);
     background-color: var(--bg-gray);
     color: #333;
     line-height: 1.6;
@@ -76,7 +76,7 @@ header {
     border-radius: 50%;
     background-color: white;
     border: 3px solid var(--light-green);
-    background-image: url('images/portugal_explora.png');
+    background-image: url('../images/portugal_explora.png');
     background-size: cover;
     background-position: center;
 }
@@ -174,7 +174,7 @@ footer {
     .hero {
         height: 100vh;
         background: linear-gradient(rgba(0, 92, 40, 0.85), rgba(0, 61, 26, 0.9)),
-                    url('');
+                    url('../images/Personnages/Backgroundmap.webp');
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
@@ -195,7 +195,7 @@ footer {
         border-radius: 50%;
         margin: 0 auto 30px;
         border: 8px solid rgba(255,255,255,0.2);
-        background-image: url('');
+        background-image: url('../images/Personnages/Retrato_de_Hernando_de_Magallanes.webp');
         background-size: cover;
         background-position: center top;
         box-shadow: 0 15px 50px rgba(0,0,0,0.6);
@@ -206,7 +206,6 @@ footer {
         font-weight: 700;
         margin-bottom: 15px;
         letter-spacing: -2px;
-        /* Oswald наследуется от глобального h1 */
     }
 
     .hero p {
@@ -326,7 +325,7 @@ footer {
         content: '';
         position: absolute;
         inset: 0;
-        background-image: url('');
+        background-image: url('../images/Personnages/Victory-24.webp');
         background-size: cover;
         background-position: center;
         opacity: 0.4;
@@ -352,14 +351,14 @@ footer {
     }
 
     .voyage-map {
-        background-color: #FFE4E4;
+        background-color: var(--primary-red);
         padding: 40px;
         border-radius: 8px;
         box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     }
 
     .voyage-map h3 {
-        color: var(--primary-red);
+        color: #FFFFFF;
         font-size: 2rem;
         margin-bottom: 30px;
     }
@@ -367,7 +366,7 @@ footer {
     .map-visual {
         width: 100%;
         height: 500px;
-        background-image: url('');
+        background-image: url('../images/Personnages/map.webp');
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
@@ -449,12 +448,12 @@ footer {
 
     .gallery-item:hover { transform: scale(1.05); }
 
-    .img-1 { background-image: url(''); }
-    .img-2 { background-image: url(''); }
-    .img-3 { background-image: url(''); }
-    .img-4 { background-image: url(''); }
-    .img-5 { background-image: url(''); }
-    .img-6 { background-image: url(''); }
+    .img-1 { background-image: url('../images/Personnages/Galaire1.webp'); }
+    .img-2 { background-image: url('../images/Personnages/Galaire2.webp'); }
+    .img-3 { background-image: url('../images/Personnages/Galaire3.webp'); }
+    .img-4 { background-image: url('../images/Personnages/Galaire4.webp'); }
+    .img-5 { background-image: url('../images/Personnages/Galaire5.webp'); }
+    .img-6 { background-image: url('../images/Personnages/Galaire6.webp'); }
 }
 
 
@@ -464,18 +463,18 @@ Page Oeuvres
 /* --- STYLES SPÉCIFIQUES À LA PAGE OEUVRES (#OeuvresPage) --- */
 
 #OeuvresPage {
-    
+
     /* Le HERO est décalé pour le premier affichage de la page */
     .hero#hero-oeuvres {
-        margin-top: var(--header-height); 
-        
+        margin-top: var(--header-height);
+
         height: 100vh;
         background: linear-gradient(rgba(0, 92, 40, 0.7), rgba(0, 61, 26, 0.8)),
-                    url('../images/Oeuvres/Le saut du Lapin.png'); 
-        
-        background-size: cover; 
-        background-repeat: no-repeat; 
-        background-position: center 35%; 
+                    url('../images/Oeuvres/Le saut du Lapin.png');
+
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center 35%;
         background-attachment: fixed;
         display: flex;
         justify-content: center;
@@ -485,11 +484,11 @@ Page Oeuvres
     .hero-content {
         text-align: center;
         color: white;
-        margin-top: 0; 
+        margin-top: 0;
     }
-    
+
     .hero h1 {
-        font-size: 4rem; 
+        font-size: 4rem;
         font-weight: 700;
         margin-bottom: 15px;
         letter-spacing: -2px;
@@ -516,7 +515,7 @@ Page Oeuvres
     /* Sidebar */
     .sidebar {
         position: sticky;
-        top: calc(var(--header-height) + 20px); 
+        top: calc(var(--header-height) + 20px);
         height: fit-content;
         justify-self: start;
         width: 100%;
@@ -529,7 +528,7 @@ Page Oeuvres
         box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.1);
         border-left: 5px solid var(--primary-green);
     }
-    
+
     .sidebar-nav h3 {
         font-size: 1.2rem;
         color: #333;
@@ -570,7 +569,8 @@ Page Oeuvres
         border-radius: 8px;
         box-shadow: 0 4px 15px rgba(0,0,0,0.05);
         border-left: 8px solid var(--primary-green);
-        scroll-margin-top: var(--header-height); 
+
+        scroll-margin-top: var(--header-height);
     }
 
     article h2 {
@@ -595,7 +595,7 @@ Page Oeuvres
 
     .article-content-split {
         display: flex;
-        align-items: flex-start; 
+        align-items: flex-start;
         gap: 40px;
         margin-bottom: 20px;
     }
@@ -603,18 +603,18 @@ Page Oeuvres
     .article-content-split .text-content {
         flex: 1;
     }
-    
-    .article-image-right, 
+
+    .article-image-right,
     .article-image-left {
-        width: 300px; 
+        width: 300px;
         flex-shrink: 0;
         text-align: center;
         padding-top: 20px;
     }
 
-    .article-image-right { order: 2; } 
-    .article-image-left { order: 1; } 
-    
+    .article-image-right { order: 2; }
+    .article-image-left { order: 1; }
+
     .article-content-split img {
         width: 100%;
         height: auto;
@@ -622,10 +622,10 @@ Page Oeuvres
         margin-bottom: 15px;
         box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
-    
+
     /* Styles pour les images superposées */
     .article-image-right img:last-child {
-        margin-bottom: 0; 
+        margin-bottom: 0;
     }
 
     .article-image-right.large-images img {
@@ -773,10 +773,10 @@ Page Oeuvres
     }
 
     .text-block {
-        flex: 1; 
-        text-align: justify; 
-        font-size: 1.3rem; 
-        padding-right: 10px; 
+        flex: 1;
+        text-align: justify;
+        font-size: 1.3rem;
+        padding-right: 10px;
     }
 
     .timeline-card {
@@ -859,11 +859,11 @@ Page Oeuvres
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         gap: 20px;
-        align-items: start; 
+        align-items: start;
     }
 
     details.info-box {
-        background-color: var(--light-green);
+        background-color: var(--light-green);        scroll-margin-top: var(--header-height);
         border: 1px solid #c2e8c2;
         border-radius: 8px;
         overflow: hidden;
@@ -880,8 +880,8 @@ Page Oeuvres
         font-weight: bold;
         font-size: 1.4rem;
         cursor: pointer;
-        list-style: none; 
-        outline: none;    
+        list-style: none;
+        outline: none;
     }
 
     .arrow {
@@ -897,7 +897,7 @@ Page Oeuvres
         animation: fadeIn 0.5s ease-in-out;
     }
 
-   
+
     details[open].info-box {
         background-color: var(--light-green);
         box-shadow: 0 5px 15px rgba(0,0,0,0.1);
