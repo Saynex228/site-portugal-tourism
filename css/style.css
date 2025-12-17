@@ -787,11 +787,9 @@ footer {
 /*
 Page Oeuvres
 */
-/* --- STYLES SPÉCIFIQUES À LA PAGE OEUVRES (#OeuvresPage) --- */
 
 #OeuvresPage {
 
-    /* Le HERO est décalé pour le premier affichage de la page */
     .hero#hero-oeuvres {
         margin-top: var(--header-height);
 
