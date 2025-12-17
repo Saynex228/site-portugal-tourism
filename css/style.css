@@ -179,7 +179,7 @@ footer {
     /* --- SECTION HERO --- */
     .hero {
         height: 100vh;
-        background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(../images/Accueil/plageville.jpeg); /* Remplace par ton image */
+        background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(../images/Accueil/plageville.jpeg);
         background-size: cover;
         background-position: center;
         display: flex;
@@ -260,7 +260,7 @@ footer {
         box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     }
 
-    /* --- SECTION EC (Emblèmes Culturels) --- */
+    /* --- SECTION EC (Emblèmes Culture) --- */
     .EC {
         color: var(--primary-red);
         padding: 20px;
@@ -295,7 +295,7 @@ footer {
         height: 80px;
         object-fit: contain;
     }
-    /* --- SECTION Acces-territoire (Emblèmes Culturels) --- */
+    /* --- SECTION Acces-territoire --- */
     .Acces-territoire {
         color: #000;
         padding: 60px 20px;
@@ -361,14 +361,12 @@ footer {
         content: '▲';
     }
 
-    /* --- STYLE DU TEXTE DÉROULANT (P) --- */
     details p {
         text-align: left;
         padding-top: 15px;
         margin: 0;
     }
 
-    /* --- TIMELINE (Frise Chronologique) --- */
     /* --- TIMELINE (Frise Chronologique) --- */
     .timeline-section {
         color: #000;
@@ -391,18 +389,14 @@ footer {
         max-width: 1200px;
         margin: 150px auto 100px auto;
         position: relative;
-        
-        /* CORRECTION DE DÉBORDEMENT : Ajout de padding de 75px (la moitié de la largeur du .textbox) */
         padding: 0 75px; 
     }
     .timeline::before {
         content: '';
         position: absolute;
         height: 4px;
-        
-        /* CORRECTION DE DÉBORDEMENT : Réduit la ligne pour s'adapter au padding */
-        width: calc(100% - 150px); /* 100% - (2 * 75px) */
-        left: 75px; /* Déplace la ligne pour commencer après le padding gauche */
+        width: calc(100% - 150px);
+        left: 75px;
         
         background-color: var(--primary-green);
         top: 50%;
@@ -447,7 +441,6 @@ footer {
         color: #333;
         font-size: 0.9em;
     }
-    /* ... le reste du .textbox et des flèches reste inchangé ... */
     
     .textbox h5 {
         margin: 0 0 5px 0;
@@ -460,7 +453,7 @@ footer {
         color: var(--primary-red);
         margin-top: 5px;
     }
-    .textbox::after { /* Flèche de connexion */
+    .textbox::after {
         content: '';
         position: absolute;
         width: 0;
@@ -471,7 +464,7 @@ footer {
         z-index: 5;
     }
 
-    /* --- Positionnement Spécifique (HAUT/BAS) --- */
+    /* --- Positionnement (HAUT/BAS) --- */
     .up-container .textbox {
         bottom: calc(50% + 40px);
     }
@@ -479,7 +472,6 @@ footer {
         top: calc(50% + 40px);
     }
 
-    /* --- Styles de Flèche Spécifiques (HAUT/BAS) --- */
     .up-container .textbox::after {
         bottom: -10px;
         border-width: 10px 10px 0 10px;
@@ -490,6 +482,8 @@ footer {
         border-width: 0 10px 10px 10px;
         border-color: transparent transparent #fff transparent;
     }
+
+
     .vignettes-container{
         display: flex;
         flex-direction: row;
@@ -1043,7 +1037,7 @@ Page Oeuvres
     /* --- Section après Header --- */
     .top {
         height: 100vh;
-        background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(../images/Lieux/AlbufeiraAcueil.webp); /* Remplace par ton image */
+        background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(../images/Lieux/AlbufeiraAcueil.webp);
         background-size: cover;
         background-position: center;
         display: flex;
