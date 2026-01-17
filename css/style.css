@@ -1544,15 +1544,32 @@ Page Oeuvres
 
         /* --- Section Découvrez aussi --- */
         .decouvrez-card {
-            flex-direction: row;
-            align-items: center;
+        flex-direction: row; 
+        align-items: center;
+        gap: 15px;
+        padding: 15px;
+        text-align: left;
         }
-        
+
         .decouvrez-card img {
             width: 120px;
-            height: 90px;
+            height: 120px;
             object-fit: cover;
+            border-radius: 10px;
             margin: 0;
+            flex-shrink: 0; 
+        }
+
+        .decouvrez-text h3 {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+            margin-top: 0;
+        }
+
+        .decouvrez-text p {
+            font-size: 0.9rem;
+            line-height: 1.3;
+            margin-bottom: 0;
         }
     }
 
