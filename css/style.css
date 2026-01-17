@@ -65,6 +65,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .header-left {
@@ -174,12 +175,11 @@ footer {
     width: 100%;
 }
 
-
 #Accueil {
     /* --- SECTION HERO --- */
     .hero {
         height: 100vh;
-        background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(../images/Accueil/plageville.jpeg);
+        background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(../images/Accueil/plageville.jpg);
         background-size: cover;
         background-position: center;
         display: flex;
@@ -260,7 +260,7 @@ footer {
         box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     }
 
-    /* --- SECTION EC (Emblèmes Culture) --- */
+    /* --- SECTION EC (Emblèmes, Culture) --- */
     .EC {
         color: var(--primary-red);
         padding: 20px;
@@ -272,6 +272,7 @@ footer {
         border: 1px solid var(--primary-red);
         border-radius: 10px;
         box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    
     }
     .EC-contenu {
         display: flex;
@@ -279,6 +280,7 @@ footer {
         gap: 50px;
         width: 100%;
         justify-content: space-around;
+        
     }
     .EC-article {
         background-color: var(--ligh-red);
@@ -327,7 +329,7 @@ footer {
         text-align: center;
     }
 
-    /* --- GESTION DU DÉTAIL (SUMMARY/FLÈCHE) --- */
+    /* --- (SUMMARY/FLÈCHE) --- */
     details summary {
         display: inline-flex;
         align-items: center;
@@ -367,122 +369,129 @@ footer {
         margin: 0;
     }
 
-    /* --- TIMELINE (Frise Chronologique) --- */
-    .timeline-section {
-        color: #000;
-        text-align: center;
-        background-color: var(--light-yellow);
-        padding: 40px 20px;
-        margin: 20px 100px;
-        border: #000 solid 1px;
-        border-radius: 10px;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    }
-    .timeline-section details summary {
-        padding-right: 40px; 
-    }
-    .timeline {
-        display: flex;
-        justify-content: space-around;
-        align-items: flex-start;
-        width: 95%;
-        max-width: 1200px;
-        margin: 150px auto 100px auto;
-        position: relative;
-        padding: 0 75px; 
-    }
-    .timeline::before {
-        content: '';
-        position: absolute;
-        height: 4px;
-        width: calc(100% - 150px);
-        left: 75px;
-        
-        background-color: var(--primary-green);
-        top: 50%;
-        transform: translateY(-50%);
-        z-index: 1;
-    }
-
-    /* --- Conteneurs d'événements --- */
-    .container {
-        flex-basis: 12%;
-        min-width: 150px;
-        position: relative;
-        z-index: 2;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 0;
-    }
-
-    .container img {
-        position: absolute;
-        width: 90px;
-        height: 90px;
-        border-radius: 50%;
-        object-fit: cover;
-        border: 2px solid white;
-        top: 50%;
-        transform: translateY(-50%);
-        z-index: 4;
-    }
-
-    /* --- Boîte de Texte (TextBox) --- */
-    .textbox {
-        width: 100%;
-        padding: 5px;
-        background-color: #fff;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-        text-align: center;
-        position: absolute;
-        z-index: 3;
-        color: #333;
-        font-size: 0.9em;
-    }
     
-    .textbox h5 {
-        margin: 0 0 5px 0;
-        font-size: 1.1em;
-        color: var(--primary-green);
-    }
-    .textbox small {
-        display: block;
-        font-weight: bold;
-        color: var(--primary-red);
-        margin-top: 5px;
-    }
-    .textbox::after {
-        content: '';
-        position: absolute;
-        width: 0;
-        height: 0;
-        border-style: solid;
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: 5;
-    }
+    /* --- TIMELINE (Frise Chronologique) - DESKTOP RESPONSIVE --- */
 
-    /* --- Positionnement (HAUT/BAS) --- */
-    .up-container .textbox {
-        bottom: calc(50% + 40px);
-    }
-    .bottom-container .textbox {
-        top: calc(50% + 40px);
-    }
+.timeline-section {
+    color: #000;
+    text-align: center;
+    background-color: var(--light-yellow);
+    padding: clamp(20px, 4vw, 40px);
+    margin: clamp(20px, 5vw, 60px);
+    border: 1px solid #000;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
 
-    .up-container .textbox::after {
-        bottom: -10px;
-        border-width: 10px 10px 0 10px;
-        border-color: #fff transparent transparent transparent;
-    }
-    .bottom-container .textbox::after {
-        top: -10px;
-        border-width: 0 10px 10px 10px;
-        border-color: transparent transparent #fff transparent;
-    }
+/* Ligne principale */
+.timeline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    margin: clamp(80px, 12vw, 150px) auto;
+    position: relative;
+    padding: 0 5vw;
+}
 
+/* Ligne horizontale */
+.timeline::before {
+    content: '';
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--primary-green);
+    z-index: 1;
+}
+
+/* Conteneur d’événement */
+.container {
+    flex: 1;
+    min-width: 0;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Point de la timeline */
+.container img {
+    position: absolute;
+    width: clamp(50px, 7vw, 90px);
+    height: clamp(50px, 7vw, 90px);
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid white;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 4;
+}
+
+/* Boîte de texte */
+.textbox {
+    width: clamp(130px, 16vw, 220px);
+    padding: 0.5em;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    position: absolute;
+    z-index: 3;
+    color: #333;
+    font-size: clamp(0.8rem, 1.1vw, 1rem);
+}
+
+/* Titres */
+.textbox h5 {
+    margin: 0 0 5px 0;
+    font-size: clamp(0.9rem, 1.2vw, 1.1rem);
+    color: var(--primary-green);
+}
+
+.textbox small {
+    display: block;
+    font-weight: bold;
+    color: var(--primary-red);
+    margin-top: 5px;
+}
+
+/* Positionnement haut / bas */
+.up-container .textbox {
+    bottom: calc(50% + clamp(30px, 4vw, 40px));
+}
+
+.bottom-container .textbox {
+    top: calc(50% + clamp(30px, 4vw, 40px));
+}
+
+/* Flèches */
+.textbox::after { 
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+}
+
+.up-container .textbox::after {
+    bottom: -10px;
+    border-width: 10px 10px 0 10px;
+    border-color: #fff transparent transparent transparent;
+}
+
+.bottom-container .textbox::after {
+    top: -10px;
+    border-width: 0 10px 10px 10px;
+    border-color: transparent transparent #fff transparent;
+}
 
     .vignettes-container{
         display: flex;
@@ -781,6 +790,8 @@ footer {
     .img-4 { background-image: url('../images/Personnages/Galaire4.webp'); }
     .img-5 { background-image: url('../images/Personnages/Galaire5.webp'); }
     .img-6 { background-image: url('../images/Personnages/Galaire6.webp'); }
+
+
 }
 
 
@@ -1326,4 +1337,81 @@ Page Oeuvres
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(-10px); }
     to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- Media Query --- */
+
+@media (max-width: 1000px) {
+
+    #Accueil{
+        .hero h1 {
+            font-size: 3.5rem;
+        }
+        .hero p {
+            font-size: 1rem;
+        }
+        .main-content-wrapper {
+        flex-direction: column;
+        }
+        .left-column,
+        .right-column {
+            width: 100%;
+            padding: 20px;
+        }
+        .EC-contenu{
+            flex-wrap: wrap;
+        }
+        .vignettes-container img{
+            width: 65%;
+        }
+        .timeline {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0 20px;
+        margin: 50px auto;
+        }
+
+        .timeline::before {
+            width: 4px;
+            height: 100%;
+            left: 20px;
+            top: 0;
+            transform: none;
+        }
+
+        .container {
+            width: 100%;
+            flex-direction: row;
+            align-items: flex-start;
+            margin-bottom: 60px;
+        }
+
+        .container img {
+            position: relative;
+            top: 0;
+            left: 0;
+            transform: none;
+            margin-right: 20px;
+            width: 120px;
+            height: 120px;
+        }
+
+        .textbox {
+            position: relative;
+            top: 0;
+            left: 0;
+            width: calc(100% - 70px);
+            margin-bottom: 20px;
+        }
+
+        .textbox::after {
+            display: none;
+        }
+
+        .up-container .textbox,
+        .bottom-container .textbox {
+            top: auto;
+            bottom: auto;
+        }
+    }
 }
