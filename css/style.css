@@ -1199,7 +1199,8 @@ Page Oeuvres
     }
 
     details.info-box {
-        background-color: var(--light-green);        scroll-margin-top: var(--header-height);
+        background-color: var(--light-green);        
+        scroll-margin-top: var(--header-height);
         border: 1px solid #c2e8c2;
         border-radius: 8px;
         overflow: hidden;
